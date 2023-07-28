@@ -15,7 +15,7 @@ fun main() {
 
     // Int and Long are dataTypes for whole numbers whereas Long is used for storing large numbers
     var num1: Int = 1234567890
-    var num2: Long = 123456789012345678
+    var num2: Long = 1234567890123456789
     println(num1)
     println(num2)
 
