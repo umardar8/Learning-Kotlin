@@ -50,7 +50,10 @@ fun main() {
         2, 3, 4, 5 -> {
     		 println("Hit with value $number")
         }
-        6 -> {
+        in 5..10 -> {
+    		 println("Super Hit with value $number")
+        }
+        else -> {
 	         println("Critical hit")
         }
   }
