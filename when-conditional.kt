@@ -56,5 +56,15 @@ fun main() {
         else -> {
 	         println("Critical hit")
         }
-  }
+    }
+
+    // you can also run branches based on the typeCheck using is keyword
+    val something: Any = "ABC" // or 123, 0.1, true
+    when (something) {
+        is String -> println("This is String")
+        is Int -> println("This is Int")
+        is Double -> println("This is Double")
+        is Boolean -> println("This is Boolean")
+    }
+    println(text)
 }
