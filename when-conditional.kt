@@ -67,4 +67,20 @@ fun main() {
         is Boolean -> println("This is Boolean")
     }
     println(text)
+
+    // you can use when statements for managing flag-check conditions for certain tasks based on flag
+    val weekDay = "Monday"
+    val hour = 12
+    val isOpen = when(weekDay) {
+        "Monday" -> hour in 8..12
+        "Tuesday" -> hour in 8..18
+        "Wednesday" -> hour in 8..18
+        "Thursday" -> hour in 8..18
+        "Friday" -> hour in 8..21
+        "Saturday" -> hour in 9..16
+        "Sunday" -> hour in 8..16
+        else -> false
+    }
+    if(isOpen) println("Little Lemon is Open!")
+    else println("Little Lemon is Closed!")
 }
