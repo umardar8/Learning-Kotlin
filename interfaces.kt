@@ -5,6 +5,7 @@
 fun main() {
     pet(Cat("Tom", "Munchkin"))
     pet(Dog("Brutus", "Bulldog"))
+    pet(Emu())
 
     // both Dog and Cat classes are directly accessible from object of Animal interface
     // thats because these classes are created by implementing the Animal interface
@@ -28,4 +29,14 @@ class Dog(val name: String, override val breed: String): Animal {
 }
 
 // this is the function that shorthands the approach of easily creating objects of a class
-fun pet(animal: Animal) {}
+fun pet(animal: Animal) {
+    println("Petting ${animal.breed}")
+    animal.pet()
+}
+
+class Emu: Animal {
+    override val breed: String = "Emu"
+    override fun pet() {
+        
+    }
+}
