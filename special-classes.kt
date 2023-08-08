@@ -19,6 +19,7 @@ fun main() {
     for(i in PaymentOptions.values()) {
         println(i)
     }
+    
 }
 
 class NormalClass(val name: String, val type: String) { }
@@ -45,4 +46,23 @@ fun pay(amount: Int, method: PaymentOptions) {
         PaymentOptions.Card -> true // or payWithCard(amount)
         PaymentOptions.Cheque -> true // or payWithCheque(amount)
     }
+}
+
+// 3. Sealed Classes: same as an Abstract class but with some limitations, sealed classes can only inherit
+// their properties to other classes which belong to same package
+
+sealed class HomoSapiens
+class theHumans: HomoSapiens()
+class theMonkeys: HomoSapiens()
+
+// 4. Annotation Class: used to show supplemental information such as
+// informing the users that a method or function is deprecated etc
+
+annotation class MyAnnotation(val message: String)
+
+fun printf(
+    @MyAnnotation("this function is deprecated, use println instead")
+    stringValue: String
+): String {
+    return stringValue
 }
