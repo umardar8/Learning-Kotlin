@@ -27,4 +27,68 @@ fun main() {
         }
     }
     println("The selected account type is: ${accountType}")
+    
+    var accountBalance = (1..100).random()
+    var checkingBalance = -accountBalance
+    val money = (1..1000).random()
+    var output = 0
+    
+    println("Your account banlance is ${accountBalance} dollars")
+    
+    fun withdraw(amount: Int): Int {
+        accountBalance -= amount
+        println("Amount to be withdrawn is ${money} dollars")
+        println("Your remaining balance is ${accountBalance} dollars")
+        return amount
+    }
+    
+    output = withdraw(money)
+    println("You withdrew ${output} dollars")
+    
+    fun debitWithdraw(amount: Int): Int {
+        if(accountBalance == 0) {
+            println("cannot withdraw, no money available")
+            println("the account balance is ${accountBalance} dollars")
+            return accountBalance
+        } else if(amount > accountBalance) {
+            println("cannot withdraw, not enough balance available")
+            return 0
+        } else {
+            accountBalance -= amount
+            println("You have withdrawn ${amount} dollars")
+            println("Your remaining balance is ${accountBalance} dollars")
+            return amount
+        }
+    }
+    
+    output = debitWithdraw(money)
+    println("You withdrew ${output} dollars")
+    
+    fun deposit(amount: Int): Int {
+        accountBalance += amount
+        println("Amount to deposit is ${money} dollars")
+        println("Your total balance is ${accountBalance} dollars")
+        return amount
+    }
+    
+    output = deposit(money)
+    println("You deposited ${output} dollars")
+    
+    fun creditDeposit(amount: Int): Int {
+        if(checkingBalance == 0) {
+            println("You dont need to deposit to payoff the account since its already paid off")
+            return checkingBalance
+        } else if(checkingBalance + amount > 0) {
+            println("Deposit failed! You tried to pay off an account greater than the pay off amount. The checking balance is ${accountBalance} dollars")
+            return 0
+        } else if(-checkingBalance == amount) {
+            println("You deposited just enough amount to payoff the account")
+            return amount
+        } else {
+            return deposit(amount)
+        }
+    }
+    
+    output = creditDeposit(money)
+    println("You deposited ${output} dollars")
 }
