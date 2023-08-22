@@ -6,13 +6,13 @@ Variables, Arithmetic and Logic Operators, Functions, Classes and their types
 
 It also contains projects created in Kotlin for testing the implementation of concepts and learning.
 
-Project 1: Banking System App
+## Project 1: Banking System App
 
-Screen 1: Account Selection / Creation Stage
+### Screen 1: Account Selection / Creation Stage
 
 ![image](https://github.com/umardar8/Learning-Kotlin/assets/66141104/5ffa0737-c3c5-4d95-816f-ddf346d68bdf)
 
-Screen 2: Account Operation Stage
+### Screen 2: Account Operation Stage
 
 ![image](https://github.com/umardar8/Learning-Kotlin/assets/66141104/667013cb-58cc-4d56-8a85-fa1dec4a8748)
 
