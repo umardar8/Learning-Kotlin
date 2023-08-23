@@ -1,8 +1,10 @@
 # Learning-Kotlin
 An effort to learn Kotlin language for Android Development
 
-This repository contains Kotlin code files with logic for basic concepts including:
-Variables, Arithmetic and Logic Operators, Functions, Classes and their types
+This repository contains Kotlin code files with logic for basic concepts with the aim to:
+
+1. Demonstrate knowledge of Variables, Values, Types, Conditions and Loops.
+2. Explain Functions, Classes, Objects, Interfaces and their types.
 
 It also contains projects created in Kotlin for testing the implementation of concepts and learning.
 
